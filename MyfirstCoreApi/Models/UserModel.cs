@@ -50,6 +50,16 @@ namespace MyfirstCoreApi.Models
 
     }
 
+    /// <summary>
+    /// 请求用户参数
+    /// </summary>
+    public class UserResuest
+    {
+        public string mobile { get; set; }
+
+        public string email { get; set; }
+    }
+
     public class UserInfo
     {
         public User data { get; set; } = new User();

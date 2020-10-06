@@ -117,6 +117,53 @@ namespace MyfirstCoreApi.Controllers
             return BadRequest();
         }
 
+        [HttpPut("{id}")]
+        public IActionResult UpdateUserById(int id, [FromBody] UserResuest userResuest)
+        {
+
+            if (CurrentUser != null && CurrentUser.Count() > 0)
+            {
+                var userinfo = CurrentUser.FirstOrDefault(x => x.id == id);
+                userinfo.email = userResuest.email;
+                userinfo.mobile = userResuest.mobile;
+
+                UserInfo userInfo = new UserInfo();
+                userInfo.data = userinfo;
+                userInfo.meta.msg = "修改用户成功";
+                userInfo.meta.status = 200;
+                return Ok(userInfo);
+            }
+
+            return BadRequest();
+        }
+
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletUserById(int id)
+        {
+
+            if (CurrentUser != null && CurrentUser.Count() > 0)
+            {
+                var userinfo = CurrentUser.FirstOrDefault(x => x.id == id);
+                try
+                {
+                    CurrentUser.Remove(userinfo);
+                }
+                catch (Exception)
+                {
+                    return BadRequest();
+                }
+
+                UserInfo userInfo = new UserInfo();
+                userInfo.data = null;
+                userInfo.meta.msg = "删除用户成功";
+                userInfo.meta.status = 200;
+                return Ok(userInfo);
+            }
+
+            return BadRequest();
+        }
+
         [HttpPost]
         public IActionResult Post([FromBody]UserBase user)
         {
