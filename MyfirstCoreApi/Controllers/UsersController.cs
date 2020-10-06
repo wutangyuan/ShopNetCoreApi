@@ -11,11 +11,8 @@ using MyfirstCoreApi.Models;
 
 namespace MyfirstCoreApi.Controllers
 {
-    [ApiController]
-    [EnableCors("any")]
     [Route("api/[controller]")]
-    [Authorize]
-    public class UsersController : ControllerBase
+    public class UsersController : MyBaseController
     {
         static IList<User> CurrentUser = new List<User>();
 
