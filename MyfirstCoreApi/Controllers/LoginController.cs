@@ -34,7 +34,7 @@ namespace MyfirstCoreApi.Controllers
 
                 shopModel.meta.msg = "登陆失败";
                 shopModel.meta.status = 404;
-                return BadRequest(shopModel);
+                return Ok(shopModel);
             }
             else
             {
