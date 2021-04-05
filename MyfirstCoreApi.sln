@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyfirstCoreApi", "MyfirstCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testConsole", "testConsole\testConsole.csproj", "{66AC947B-FF22-4313-9763-FA93A36630A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.EF.Core", "Shop.EF.Core\Shop.EF.Core.csproj", "{B16287B2-CE4A-4F44-B5A3-876000888E28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{66AC947B-FF22-4313-9763-FA93A36630A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66AC947B-FF22-4313-9763-FA93A36630A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66AC947B-FF22-4313-9763-FA93A36630A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B16287B2-CE4A-4F44-B5A3-876000888E28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B16287B2-CE4A-4F44-B5A3-876000888E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B16287B2-CE4A-4F44-B5A3-876000888E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B16287B2-CE4A-4F44-B5A3-876000888E28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
