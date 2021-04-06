@@ -17,4 +17,9 @@
     <Folder Include="Services\" />
     <Folder Include="IServices\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.EF.Core\Shop.EF.Core.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

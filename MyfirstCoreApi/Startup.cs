@@ -18,6 +18,7 @@ using Microsoft.OpenApi.Models;
 using MyfirstCoreApi.IServices;
 using MyfirstCoreApi.Models;
 using MyfirstCoreApi.Services;
+using Shop.EF.Core;
 using Swashbuckle.AspNetCore.Filters;
 
 namespace MyfirstCoreApi
@@ -103,6 +104,8 @@ namespace MyfirstCoreApi
                 });
 
             });
+
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -139,6 +142,8 @@ namespace MyfirstCoreApi
                 c.SwaggerEndpoint("/swagger/v1/swagger.json","MyFirstApix");
                 c.RoutePrefix = "api"; //启动直接域名/api
             });
+
+
         }
     }
 }
